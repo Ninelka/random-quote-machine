@@ -1,0 +1,18 @@
+.quote {
+	&__text-container,
+	&__author {
+		font-size: 2em;
+	}
+
+	&__text-container {
+		text-align: center;
+	}
+
+	&__text {
+		margin-left: 0.4em;
+	}
+
+	&__author {
+		text-align: right;
+	}
+}
