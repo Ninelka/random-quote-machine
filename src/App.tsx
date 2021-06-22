@@ -43,15 +43,17 @@ class App extends React.Component<IQuote, IQuote> {
   render() {
     return (
       <div className='app'>
-        <h1 className='app__title'>Random Quote Machine</h1>
-        <div className='app__content' id="quote-box">
-          <Quote quote={this.state.quote} author={this.state.author} />
-          <div className='app__actions'>
-            <TweetBtn quote={this.state.quote} author={this.state.author} />
-            <NewQuoteBtn onUpdateState={this.fetchQuotes} />
+        <div className='app__container'>
+          <h1 className='app__title'>Random Quote Machine</h1>
+          <div className='app__content' id="quote-box">
+            <Quote quote={this.state.quote} author={this.state.author} />
+            <div className='app__actions'>
+              <TweetBtn quote={this.state.quote} author={this.state.author} />
+              <NewQuoteBtn onUpdateState={this.fetchQuotes} />
+            </div>
           </div>
+          <footer className="app__footer">by <a href="https://codepen.io/Ninelka/">Ninel</a></footer>
         </div>
-        <footer className="app__footer">by <a href="https://codepen.io/Ninelka/">Ninel</a></footer>
       </div>
     );
   }
