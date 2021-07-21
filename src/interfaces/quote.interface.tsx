@@ -1,5 +1,5 @@
 export default interface IQuote {
-    quote?: string
-    author?: string
-    onUpdateState?: any
+    quote?: string | undefined
+    author?: string | undefined
+    onUpdateState?: () => void
 }

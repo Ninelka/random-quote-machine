@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { ReactEventHandler } from 'react'
 import '../button.scss'
 
-class NewQuoteBtn extends React.Component<any, {}> {
-  render() {
-    return (
-      <button className='button button_new' onClick={this.props.onUpdateState}>New</button>
-    )
-  }
+type MyProps = {
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void,
+  onUpdateState?: () => void
+}
+
+function NewQuoteBtn(props: MyProps) {
+  return (
+    <button className='button button_new' onClick={props.onUpdateState}>New</button>
+  )
 }
 
 export default NewQuoteBtn
