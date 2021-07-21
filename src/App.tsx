@@ -29,7 +29,7 @@ const App: React.FC = () => {
       )
   }
 
-  useEffect(() => { fetchQuotes() });
+  useEffect(() => { fetchQuotes() }, []);
 
   return (
     <div className='app'>
